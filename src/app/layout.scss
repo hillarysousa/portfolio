@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;500;600;700&family=Yeseva+One&display=swap');
+@import "mixins", "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    height: 1500px;
+
+    // background home
+    background-color: #ffffff;
+    opacity: 1;
+    background: repeating-linear-gradient(-45deg, #FDFBF8, #FDFBF8 2px, #ffffff 2px, #ffffff 10px);
+
+    // background portfolio
+    // background: radial-gradient(circle at top left, transparent 25%, #FDFBF8 25.5%, #FDFBF8 36%, transparent 37%, transparent 100%), radial-gradient(circle at bottom right, transparent 34%, #FDFBF8 34.5%, #FDFBF8 45.5%, transparent 46%, transparent 100%);
+    // background-size: 2em 2em;
+    // background-color: #ffffff;
+    // opacity: 1
+}
+
+.header {
+    @include grid;
+    align-items: center;
+    color: #fff;
+    padding: 24px;
+    top: 0;
+    position: sticky;
+
+    &__logo {
+        grid-column: span 2;
+        justify-self: left;
+    }
+
+    &__menu {
+        grid-column: 7 / span 6;
+        justify-content: space-between;
+        width: 100%;
+        display: inline-flex;
+    }
+
+    li {
+        display: inline;
+        color: $black;
+        font-size: 1.5rem;
+
+        &.active {
+            font-weight: 700;
+            color: $brown;
+        }
+    }
+}
