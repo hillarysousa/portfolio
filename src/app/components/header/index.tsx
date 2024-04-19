@@ -1,17 +1,18 @@
 import Image from "next/image";
+import globe from "../../assets/svg/globe.svg";
 
 export default function Header() {
   return (
     <header className="header">
       <div className="header__logo">
-        <img src="https://placehold.co/125" alt="Hillary Sousa" width={125} height={125} />
+        <Image src="https://placehold.co/125" alt="Hillary Sousa" width={125} height={125} />
       </div>
       <menu className="header__menu">
-        <li className="active">home</li>
-        <li>portfólio</li>
-        <li>experiência</li>
-        <li>contato</li>
-        <li>lang</li>
+        <li className="active"><a href="#home">home</a></li>
+        <li><a href="#portfolio">portfólio</a></li>
+        <li><a href="#experiencia">experiência</a></li>
+        <li><a href="#contato">contato</a></li>
+        <li><Image src={globe} alt="mude o idioma" className="header__menu__icon" /></li>
       </menu>
     </header>
   )
