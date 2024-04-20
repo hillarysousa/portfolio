@@ -1,0 +1,19 @@
+@import "../../variables";
+
+.portfolioCard {
+    grid-column: span 3;
+    display: flex;
+    flex-flow: column nowrap;
+
+    &__image {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        color: $brown;
+        font-weight: 500;
+    }
+}

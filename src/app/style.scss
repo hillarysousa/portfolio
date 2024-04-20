@@ -17,78 +17,16 @@ body {
     font-size: 16px;
     height: 1500px;
 
-    // background home
-    background-color: #ffffff;
-    opacity: 1;
-    background: repeating-linear-gradient(-45deg, #FDFBF8, #FDFBF8 2px, #ffffff 2px, #ffffff 10px);
-
-    // background portfolio
-    // background: radial-gradient(circle at top left, transparent 25%, #FDFBF8 25.5%, #FDFBF8 36%, transparent 37%, transparent 100%), radial-gradient(circle at bottom right, transparent 34%, #FDFBF8 34.5%, #FDFBF8 45.5%, transparent 46%, transparent 100%);
-    // background-size: 2em 2em;
-    // background-color: #ffffff;
-    // opacity: 1
-}
-
-.header {
-    @include grid;
-    padding: 24px;
-    align-items: center;
-    color: #fff;
-    top: 0;
-    position: sticky;
-
-    &__logo {
-        grid-column: span 2;
-        justify-self: left;
-    }
-
-    &__menu {
-        grid-column: 7 / span 6;
-        justify-content: space-between;
-        width: 100%;
-        display: inline-flex;
-
-        &__icon {
-            filter: $filter-almond;
-
-            &:hover {
-                filter: $filter-brown;
-            }
-        }
-    }
-
-    li {
-        display: inline;
-        font-size: 1.5rem;
-
-        a {
-            color: $black;
-            text-decoration: none;
-
-            &:hover {
-                color: $brown;
-            }
-        }
-
-        &.active a {
-            font-weight: 700;
-            color: $brown;
-
-            &:after {
-                content: '*';
-                color: $almond;
-                font-size: 2rem;
-                line-height: 0.5rem;
-            }
-        }
-    }
 }
 
 .home {
     @include grid;
     padding: 24px;
-    scroll-margin-top: 10rem;
+    margin-top: 10rem;
     grid-row-gap: 2rem;
+    background-color: #ffffff;
+    opacity: 1;
+    background: repeating-linear-gradient(-45deg, #FDFBF8, #FDFBF8 2px, #ffffff 2px, #ffffff 10px);
 
     &__title {
         grid-column: 1 / 13;
@@ -157,4 +95,40 @@ body {
     }
 }
 
-.portfolio {}
+.portfolio {
+    @include grid;
+    background: radial-gradient(circle at top left, transparent 25%, #FDFBF8 25.5%, #FDFBF8 36%, transparent 37%, transparent 100%), radial-gradient(circle at bottom right, transparent 34%, #FDFBF8 34.5%, #FDFBF8 45.5%, transparent 46%, transparent 100%);
+    background-size: 2em 2em;
+    background-color: #ffffff;
+    opacity: 1;
+    padding: 10rem 24px 0;
+    scroll-margin-top: 10rem;
+
+    &__textarea {
+        grid-column: 1 / 6;
+        position: sticky;
+        top: 20rem;
+        height: 10rem;
+
+        &__title {
+            font-family: "Yeseva One", serif;
+            color: $black;
+            font-size: 5rem;
+            font-weight: normal;
+        }
+
+        &__paragraph {
+            font-size: 2rem;
+        }
+    }
+
+    &__showcase {
+        grid-column: 7 / 13;
+        scroll-margin-top: 20rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 36px;
+        padding: 24px 0;
+        row-gap: 56px;
+    }
+}
