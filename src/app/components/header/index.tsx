@@ -1,6 +1,8 @@
 import Image from "next/image";
 import globe from "../../assets/svg/globe.svg";
 
+import './style.scss';
+
 export default function Header() {
   return (
     <header className="header">
