@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Sarabun", sans-serif;
 }
 
 html {
@@ -12,7 +13,6 @@ html {
 }
 
 body {
-    font-family: "Sarabun", sans-serif;
     font-weight: 300;
     font-size: 16px;
     height: 1500px;
@@ -102,6 +102,7 @@ body {
     background-color: #ffffff;
     opacity: 1;
     padding: 10rem 24px 0;
+    min-height: 100vh;
     scroll-margin-top: 10rem;
 
     &__textarea {
@@ -130,5 +131,93 @@ body {
         gap: 36px;
         padding: 24px 0;
         row-gap: 56px;
+    }
+}
+
+.experience {
+    @include grid;
+    background-color: #FDFBF8;
+    opacity: 1;
+    padding: 15rem 24px 10rem;
+    min-height: 100vh;
+    scroll-margin-top: 10rem;
+    background: repeating-linear-gradient(-45deg, #F5F0E5, #F5F0E5 2px, #FDFBF8 2px, #FDFBF8 10px);
+
+    &__textarea {
+        grid-column: 1 / 6;
+        position: sticky;
+        top: 20rem;
+        height: 10rem;
+
+        &__title {
+            font-family: "Yeseva One", serif;
+            color: $black;
+            font-size: 5rem;
+            font-weight: normal;
+        }
+
+        &__paragraph {
+            font-size: 2rem;
+
+            &-highlight {
+                font-weight: 600;
+                color: $brown;
+            }
+        }
+
+        &__button {
+            display: inline-block;
+            background-color: none;
+            border: 3px solid $almond;
+            color: $almond;
+            font-size: 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 30px;
+            margin-top: 20px;
+            border-radius: 1rem;
+
+            &:hover {
+                background-color: rgba(129, 52, 5, 0.1);
+            }
+        }
+    }
+
+    &__showcase {
+        grid-column: 7 / 13;
+        scroll-margin-top: 20rem;
+    }
+}
+
+.contact {
+    @include grid;
+    background-image: radial-gradient(#fdfbf8 3px, transparent 3px), radial-gradient(#fdfbf8 3px, transparent 3px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    background-color: #f5f0e5;
+    padding: 10rem 24px 0;
+    min-height: 100vh;
+    scroll-margin-top: 10rem;
+
+    &__textarea {
+        grid-column: 3 / 11;
+        position: sticky;
+        top: 20rem;
+        height: 10rem;
+
+        &__title {
+            font-family: "Yeseva One", serif;
+            color: $black;
+            text-align: center;
+            font-size: 5rem;
+            font-weight: normal;
+        }
+
+        &__socials ul {
+            list-style: none;
+            display: inline-flex;
+            width: 100%;
+            justify-content: space-evenly;
+        }
     }
 }
