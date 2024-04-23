@@ -12,8 +12,8 @@ export default function Header() {
       <menu className="header__menu">
         <li className="active"><a href="#home">home</a></li>
         <li><a href="#portfolio">portfólio</a></li>
-        <li><a href="#experiencia">experiência</a></li>
-        <li><a href="#contato">contato</a></li>
+        <li><a href="#experience">experiência</a></li>
+        <li><a href="#contact">contato</a></li>
         <li><Image src={globe} alt="mude o idioma" className="header__menu__icon" /></li>
       </menu>
     </header>
