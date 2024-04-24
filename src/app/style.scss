@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;500;600;700&family=Yeseva+One&display=swap');
 @import "mixins", "variables";
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Sarabun", sans-serif;
+    font-family: var(--font-sarabun);
 }
 
 html {
@@ -32,7 +31,7 @@ body {
     &__title {
         grid-column: 1 / 13;
         grid-row: 1;
-        font-family: "Yeseva One", serif;
+        font-family: var(--font-yeseva-one);
         font-size: 11.5rem;
         line-height: 11rem;
         text-align: right;
@@ -40,7 +39,7 @@ body {
         color: $black;
 
         &-highlight {
-            font-family: "Yeseva One", serif;
+            font-family: var(--font-yeseva-one);
             color: $almond;
         }
     }
@@ -114,7 +113,7 @@ body {
         height: 10rem;
 
         &__title {
-            font-family: "Yeseva One", serif;
+            font-family: var(--font-yeseva-one);
             color: $black;
             font-size: 5rem;
             font-weight: normal;
@@ -152,7 +151,7 @@ body {
         height: 10rem;
 
         &__title {
-            font-family: "Yeseva One", serif;
+            font-family: var(--font-yeseva-one);
             color: $black;
             font-size: 5rem;
             font-weight: normal;
@@ -207,7 +206,7 @@ body {
         top: 20rem;
 
         &__title {
-            font-family: "Yeseva One", serif;
+            font-family: var(--font-yeseva-one);
             color: $black;
             text-align: center;
             font-size: 5rem;

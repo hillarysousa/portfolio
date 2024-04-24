@@ -1,9 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Yeseva_One, Sarabun } from "next/font/google";
 
 import './style.scss';
 
-const inter = Inter({ subsets: ["latin"] });
+const sarabun = Sarabun({
+  subsets: ["latin"],
+  variable: '--font-sarabun',
+  display: 'swap',
+  weight: ['300', '500', '600', '700']
+});
+
+const yeseva_one = Yeseva_One({
+  subsets: ['latin'],
+  variable: '--font-yeseva-one',
+  display: 'swap',
+  weight: "400"
+})
 
 export const metadata: Metadata = {
   title: "Hillary Sousa - Design & Development",
@@ -23,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${sarabun.variable} ${yeseva_one.variable}`}>
+      <body >{children}</body>
     </html>
   );
 }
