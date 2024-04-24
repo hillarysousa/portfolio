@@ -27,6 +27,7 @@ body {
     background-color: #ffffff;
     opacity: 1;
     background: repeating-linear-gradient(-45deg, #FDFBF8, #FDFBF8 2px, #ffffff 2px, #ffffff 10px);
+    scroll-margin-top: 10rem;
 
     &__title {
         grid-column: 1 / 13;
@@ -39,6 +40,7 @@ body {
         color: $black;
 
         &-highlight {
+            font-family: "Yeseva One", serif;
             color: $almond;
         }
     }
@@ -196,14 +198,13 @@ body {
     background-position: 0 0, 15px 15px;
     background-color: #f5f0e5;
     padding: 10rem 24px 0;
-    min-height: 100vh;
-    scroll-margin-top: 10rem;
+    min-height: 90vh;
+    scroll-margin-top: 5rem;
 
     &__textarea {
         grid-column: 3 / 11;
         position: sticky;
         top: 20rem;
-        height: 10rem;
 
         &__title {
             font-family: "Yeseva One", serif;
@@ -213,11 +214,72 @@ body {
             font-weight: normal;
         }
 
-        &__socials ul {
+        &__socials {
             list-style: none;
             display: inline-flex;
+            margin-top: 56px;
             width: 100%;
             justify-content: space-evenly;
+
+            &__link {
+                font-size: 2rem;
+                font-weight: 600;
+                text-decoration: none;
+                color: $brown;
+                display: inline-flex;
+                align-items: center;
+
+                &:hover {
+                    color: $black;
+
+                    .contact__textarea__socials__link__icon {
+                        filter: $filter-black;
+                    }
+                }
+
+                &__icon {
+                    margin-right: 16px;
+                    width: 56px;
+                    height: 56px;
+                    filter: $filter-brown;
+                }
+            }
         }
+
+        &__mail {
+            margin-top: 56px;
+            text-align: center;
+
+            &__link {
+                font-size: 2rem;
+                font-weight: 600;
+                text-decoration: none;
+                color: $brown;
+                display: inline-flex;
+                align-items: center;
+
+                &:hover {
+                    color: $black;
+
+                    .contact__textarea__mail__link__icon {
+                        filter: $filter-black;
+                    }
+                }
+
+                &__icon {
+                    margin-right: 16px;
+                    width: 56px;
+                    height: 56px;
+                    filter: $filter-brown;
+                }
+            }
+        }
+    }
+
+    &__footer {
+        align-items: flex-end;
+        display: inline-grid;
+        grid-column: span 12;
+        justify-content: center;
     }
 }
