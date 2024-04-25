@@ -22,7 +22,7 @@ export default function Home() {
                     </a>
                 </div>
                 <div className="home__footer__scroll">
-                    <a href="#portfolio">
+                    <a href="#experience">
                         <Image src={DoubleArrow} alt="Scroll" />
                     </a>
                 </div>

@@ -5,7 +5,7 @@ import './style.scss';
 
 export default function ExperienceTabs() {
     return (
-        <Tabs className="tabs" selectedTabClassName="tabs__tab-selected">
+        <Tabs className="tabs" selectedTabClassName="tabs__tab-selected" >
             <TabList className="tabs__list">
                 <Tab className="tabs__tab">Nomad</Tab>
                 <Tab className="tabs__tab">Nubank</Tab>
