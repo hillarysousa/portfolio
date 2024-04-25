@@ -33,6 +33,10 @@
         width: 100%;
         display: inline-flex;
 
+        @media screen and (max-width: 700px) {
+            grid-column: 5 / 13;
+        }
+
         &__icon {
             filter: $filter-almond;
 
@@ -40,15 +44,23 @@
                 filter: $filter-brown;
             }
         }
-
-        @media screen and (max-width: 700px) {
-            grid-column: 5 / 13;
-        }
     }
 
     li {
         display: inline;
         font-size: 1.5rem;
+
+        @media screen and (max-width: 700px) {
+            font-size: 1.25rem;
+
+
+            &.active a {
+
+                &:after {
+                    font-size: 1.75rem;
+                }
+            }
+        }
 
         a {
             color: $black;
@@ -68,19 +80,6 @@
                 color: $almond;
                 font-size: 2rem;
                 line-height: 0.5rem;
-            }
-        }
-
-
-        @media screen and (max-width: 700px) {
-            font-size: 1.25rem;
-
-
-            &.active a {
-
-                &:after {
-                    font-size: 1.75rem;
-                }
             }
         }
     }
