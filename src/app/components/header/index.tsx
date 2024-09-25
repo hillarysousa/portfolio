@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useHash } from "@/app/hooks";
-import Logo from "../../assets/images/logo.png";
+import Logo from "../../assets/svg/logo.svg";
 import './style.scss';
 
 export default function Header() {
@@ -34,7 +34,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header__logo">
-        <Image src={Logo} alt="Hillary Sousa" />
+        <Image src={Logo} alt="Hillary Sousa" width={120} />
       </div>
       <menu className="header__menu">
         <li className={currentSection === '#home' || currentSection === '' ? 'active' : ''}><a onClick={() => handleClick('#home')}>home</a></li>
