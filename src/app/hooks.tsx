@@ -1,7 +1,9 @@
+'use client';
+
 import { useCallback, useEffect, useState } from "react";
 
 export const useHash = () => {
-    const [hash, setHash] = useState(() => window.location.hash);
+    const [hash, setHash] = useState(() => '');
 
     const hashChangeHandler = useCallback(() => {
         setHash(window.location.hash);

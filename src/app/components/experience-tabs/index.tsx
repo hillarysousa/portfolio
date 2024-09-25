@@ -14,10 +14,11 @@ export default function ExperienceTabs() {
 
             <TabPanel className="tabs__tabpanel">
                 <h3 className='tabs__tabpanel__title'>Desenvolvedora front-end sênior @ Nomad</h3>
-                <p className='tabs__tabpanel__period'>abril de 2023 - Presente</p>
+                <p className='tabs__tabpanel__period'>abril de 2023 - agosto de 2024</p>
                 <div className='tabs__tabpanel__content'>
                     <ul>
                         <li>Desenvolvimento de funcionalidades para a área de Backoffice da Nomad, visando ampliar o suporte às operações executadas via aplicativo</li>
+                        <li>Atuação como OWASP Security Champion, promovendo e liderando práticas de segurança dentro da equipe de desenvolvimento do Backoffice</li>
                         <li>Desenvolvimento de funcionalidades para o site da Nomad, com o intuito de incrementar o tráfego orgânico e aumentar volume de acessos no aplicativo</li>
                         <li>Atuação na priorização de funcionalidades do Backoffice, onde conduzo reuniões com stakeholders internos</li>
                     </ul>
