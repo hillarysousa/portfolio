@@ -10,6 +10,7 @@ export default function Header() {
   const [currentSection, setCurrentSection] = useState<string | null>(null);
 
   const handleClick = (anchor: string) => {
+    setCurrentSection(anchor);
     return setHash(anchor);
   }
 
