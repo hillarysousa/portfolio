@@ -19,6 +19,7 @@ const yeseva_one = Yeseva_One({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hillarysousa.com.br'),
   title: "Hillary Sousa - Design & Development",
   description: "Portfólio de Hillary Sousa",
   openGraph: {
@@ -26,9 +27,6 @@ export const metadata: Metadata = {
     url: 'https://hillarysousa.com.br/',
     title: "Hillary Sousa - Design & Development",
     description: "Portfólio de Hillary Sousa",
-    images: [
-      { url: "https://hillarysousa.com.br/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.0cd3a9d9.svg&w=256&q=75" }
-    ]
   }
 };
 
