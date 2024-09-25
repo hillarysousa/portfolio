@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Yeseva_One, Sarabun } from "next/font/google";
+import Logo from "./assets/images/logo.png";
 
 import './style.scss';
 
@@ -20,6 +21,15 @@ const yeseva_one = Yeseva_One({
 export const metadata: Metadata = {
   title: "Hillary Sousa - Design & Development",
   description: "Portfólio de Hillary Sousa",
+  openGraph: {
+    type: 'website',
+    url: 'https://hillarysousa.com.br/',
+    title: "Hillary Sousa - Design & Development",
+    description: "Portfólio de Hillary Sousa",
+    images: [
+      { url: "https://hillarysousa.com.br/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.d276e300.png&w=256&q=75" }
+    ]
+  }
 };
 
 export const viewport: Viewport = {
