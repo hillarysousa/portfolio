@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { useHash } from "@/app/hooks";
 import Logo from "../../assets/svg/logo.svg";
@@ -14,22 +14,22 @@ export default function Header() {
     return setHash(anchor);
   }
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll('section[id]');
-      sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top > 0 && rect.top < 160) {
-          if (!hash.length || hash !== window.location.hash) {
-            history.replaceState(null, '', `#${section.id}`);
-            setCurrentSection(window.location.hash);
-          }
+  const handleScroll = useCallback(() => {
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top > 0 && rect.top < 160) {
+        if (currentSection !== window.location.hash) {
+          history.replaceState(null, '', `#${section.id}`);
+          setCurrentSection(window.location.hash);
         }
-      });
-    }
-    setCurrentSection(window.location.hash);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
     document.addEventListener('scroll', handleScroll);
-  }, [currentSection, hash]);
+  }, [currentSection, handleScroll, hash]);
 
 
   return (
