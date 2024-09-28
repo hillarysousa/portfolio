@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "i18next": "^23.15.1",
+    "i18next-resources-to-backend": "^1.2.1",
     "next": "14.2.1",
+    "next-i18n-router": "^5.5.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-i18next": "^15.0.2",
     "react-tabs": "^6.0.2"
   },
   "devDependencies": {

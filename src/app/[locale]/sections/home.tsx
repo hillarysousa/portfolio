@@ -3,12 +3,15 @@ import Behance from "../assets/svg/behance.svg";
 import GitHub from "../assets/svg/github.svg";
 import LinkedIn from "../assets/svg/linkedin.svg";
 import DoubleArrow from "../assets/svg/down_double_arrow.svg";
+import initTranslations from '@/app/i18n';
 
-export default function Home() {
+export default async function Home({ params: { locale } }: { params: { locale: string } }) {
+    const { t } = await initTranslations(locale, ['t']);
+
     return (
         <section id="home" className="home">
-            <h1 className="home__title">olá!<br />sou a <span className="home__title-highlight">Hillary</span></h1>
-            <div className="home__intro"><span className="home__intro-highlight">desenvolvedora front-end</span> apaixonada por criar experiências cativantes e funcionais, combinando habilidades técnicas com criatividade e inovação</div>
+            <h1 className="home__title">{t('t:home:header:greeting')}<br />{t('t:home:header:identification')}<span className="home__title-highlight">{t('t:home:header:name')}</span></h1>
+            <div className="home__intro"><span className="home__intro-highlight">{t('t:home:paragraph:highlight')}</span>{t('t:home:paragraph:text')}</div>
             <div className="home__footer">
                 <div className="home__footer__socials">
                     <a href="https://www.linkedin.com/in/hillarysousa/" target="_blank">

@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
+import { dir } from 'i18next';
 import { Yeseva_One, Sarabun } from "next/font/google";
-import Logo from "./assets/images/logo.png";
-
+import '../i18n';
 import './style.scss';
+import i18nConfig from "@/i18nConfig";
 
 const sarabun = Sarabun({
   subsets: ["latin"],
@@ -37,14 +38,21 @@ export const viewport: Viewport = {
   userScalable: false,
 }
 
+export function generateStaticParams() {
+  return i18nConfig.locales.map(locale => ({ locale }));
+}
+
 export default function RootLayout({
   children,
+  params: { locale }
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  console.log(locale, 'locale >>>')
   return (
-    <html lang="en" className={`${sarabun.variable} ${yeseva_one.variable}`}>
-      <body >{children}</body>
+    <html lang={locale} dir={dir(locale)} className={`${sarabun.variable} ${yeseva_one.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
