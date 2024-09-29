@@ -7,7 +7,6 @@ import './style.scss';
 export default function ExperienceTabs() {
     const { t } = useTranslation('t');
 
-    console.log(t("t:experience:title"), 'meaaaanu >>>')
     return (
         <Tabs className="tabs" selectedTabClassName="tabs__tab-selected" >
             <TabList className="tabs__list">

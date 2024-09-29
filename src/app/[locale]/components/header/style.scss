@@ -47,9 +47,22 @@
         }
     }
 
+    #languageSelector {
+        display: none;
+    }
+
     li {
         display: inline;
         font-size: 1.5rem;
+        position: relative;
+
+        .languageSelector_icon {
+            filter: $filter-almond;
+
+            &:hover {
+                filter: $filter-brown;
+            }
+        }
 
         a {
             color: $black;
@@ -80,6 +93,31 @@
 
                 &:after {
                     font-size: 1.5rem;
+                }
+            }
+        }
+
+        &#languageMenu:hover {
+            .languageSelector {
+                display: block;
+                top: 100%;
+                position: absolute;
+                color: black;
+                text-align: center;
+                width: 100%;
+                font-size: 1.25rem;
+
+                li {
+                    display: block;
+
+                    &:hover {
+                        color: $brown;
+                    }
+
+                    &.active {
+                        color: $brown;
+                        font-weight: 700;
+                    }
                 }
             }
         }

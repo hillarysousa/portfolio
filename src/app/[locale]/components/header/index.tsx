@@ -3,9 +3,9 @@ import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import Image from "next/image";
 import { useHash } from "@/app/[locale]/hooks";
-import initTranslations from '@/app/i18n';
 import Logo from "../../assets/svg/logo.svg";
 import './style.scss';
+import LanguageSelect from "../languageSelect";
 
 export default function Header() {
   const [hash, setHash] = useHash();
@@ -44,6 +44,7 @@ export default function Header() {
         <li className={currentSection === '#home' || currentSection === '' ? 'active' : ''}><a onClick={() => handleClick('#home')}>{t("t:menu:home")}</a></li>
         <li className={currentSection === '#experience' ? 'active' : ''}><a onClick={() => handleClick('#experience')}>{t("t:menu:experience")}</a></li>
         <li className={currentSection === '#contact' ? 'active' : ''}><a onClick={() => handleClick('#contact')}>{t("t:menu:contact")}</a></li>
+        <li id="languageMenu"><LanguageSelect /></li>
       </menu>
     </header>
   )

@@ -49,7 +49,6 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
-  console.log(locale, 'locale >>>')
   return (
     <html lang={locale} dir={dir(locale)} className={`${sarabun.variable} ${yeseva_one.variable}`}>
       <body>{children}</body>

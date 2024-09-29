@@ -14,7 +14,6 @@ export default async function initTranslations(
     i18nInstance.use(initReactI18next);
 
     if (!resources) {
-        console.log('entrei')
         i18nInstance.use(
             resourcesToBackend(
                 (language: string) =>
