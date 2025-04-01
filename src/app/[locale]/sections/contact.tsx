@@ -9,6 +9,10 @@ export default async function Contact({ params: { locale } }: { params: { locale
 
     const { t } = await initTranslations(locale, ['t']);
 
+    const currentDate = new Date;
+
+    const currentYear = currentDate.getFullYear();
+
     return (
         <section id="contact" className="contact">
             <div className="contact__textarea">
@@ -31,7 +35,7 @@ export default async function Contact({ params: { locale } }: { params: { locale
                 </div>
             </div>
             <div className="contact__footer">
-                <p>{t("t:contact:footer")}</p>
+                <p>{t("t:contact:footer")}{currentYear}</p>
             </div>
         </section>
     )
