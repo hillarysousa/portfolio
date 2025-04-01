@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 import i18nConfig from '@/i18nConfig';
 import Globe from "../../assets/svg/globe.svg";
 
-export default function LanguageSelect() {
+export default function LanguageSelectDesktop() {
     const { i18n } = useTranslation();
     const currentLocale = i18n.language;
     const [langSelected, setLangSelected] = useState(currentLocale);

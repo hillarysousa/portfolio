@@ -1,4 +1,4 @@
-import Header from "./components/header";
+import dynamic from 'next/dynamic';
 import Home from "./sections/home";
 import Portfolio from "./sections/portfolio";
 import Experience from "./sections/experience";
@@ -8,6 +8,9 @@ import initTranslations from "../i18n";
 
 const i18nNamespaces = ['t'];
 
+const NoSSRHeader = dynamic(() => import('./components/header'), { ssr: false })
+
+
 export default async function App({ params: { locale } }: { params: { locale: string } }) {
   const { resources } = await initTranslations(locale, i18nNamespaces);
   return (
@@ -15,7 +18,7 @@ export default async function App({ params: { locale } }: { params: { locale: st
       namespaces={i18nNamespaces}
       locale={locale}
       resources={resources}>
-      <Header />
+      <NoSSRHeader />
       <main>
         <Home params={{ locale }} />
         {/* <Portfolio /> */}

@@ -1,9 +1,7 @@
 @import "../../mixins", "../../variables";
 
 .header {
-    @include grid;
     padding: 24px;
-    align-items: center;
     color: #fff;
     top: 0;
     position: fixed;
@@ -11,6 +9,21 @@
     z-index: 1;
     width: 100%;
     background-color: #FFFFFF;
+
+    @media screen and (max-width: 700px) {
+        &__wrapper {
+            @include grid;
+            align-items: center;
+            width: 200%;
+        }
+    }
+
+    @media screen and (min-width: 701px) {
+        @include grid;
+        align-items: center;
+    }
+
+
 
     &__logo {
         grid-column: span 2;
