@@ -27,6 +27,16 @@
         "file": "Curriculo_HillarySousa_EN.pdf",
         "tabs": {
             "first_tab": {
+                "title": "iFood",
+                "subtitle": "Senior software engineer @ iFood",
+                "period": "december 2024 - present",
+                "topics": {
+                    "first": "Experience in the Logistics team, managing delivery partners on the app with a focus on identifying and handling fraud cases",
+                    "second": "Experience in the Jetski team, contributing to the agile development of strategic solutions for attracting and retaining new delivery partners at iFood",
+                    "third": "Mentorship in the iFuture internship program, directly impacting the professional development of eight interns"
+                }
+            },
+            "second_tab": {
                 "title": "Nomad",
                 "subtitle": "Senior front-end developer @ Nomad",
                 "period": "april 2023 - august 2024",
@@ -37,7 +47,7 @@
                     "fourth": "Developing functionalities for Nomad's website, with the aim of increasing organic traffic and increasing the volume of hits on the app"
                 }
             },
-            "second_tab": {
+            "third_tab": {
                 "title": "Nubank",
                 "subtitle": "Senior software engineer @ Nubank",
                 "period": "february 2022 - february 2023",
@@ -48,7 +58,7 @@
                     "fourth": "Development of pages and components in Clojure and Flutter for the Investment Funds area of the Nubank app"
                 }
             },
-            "third_tab": {
+            "fourth_tab": {
                 "title": "Americanas s.a.",
                 "subtitle": "Senior front-end developer @ Americanas s.a.",
                 "period": "may 2019 - december 2021",
