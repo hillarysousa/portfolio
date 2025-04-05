@@ -1,138 +1,198 @@
 @import "../../mixins", "../../variables";
 
 .header {
-    padding: 24px;
-    color: #fff;
-    top: 0;
-    position: fixed;
-    height: 10rem;
-    z-index: 1;
-    width: 100%;
-    background-color: #FFFFFF;
+  padding: 24px;
+  color: #fff;
+  top: 0;
+  position: fixed;
+  height: 10rem;
+  z-index: 1;
+  width: 100%;
+  background-color: #ffffff;
+
+  @media screen and (min-width: 701px) {
+    &__wrapper {
+      @include grid;
+      width: 100%;
+      align-items: center;
+
+      &-first {
+        grid-column: 1 / span 4;
+      }
+
+      &-second {
+        grid-column: 10 / span 3;
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    &__wrapper {
+      display: grid;
+      align-items: center;
+      width: 200%;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      align-items: center;
+      width: 210%;
+      position: relative;
+      transition: transform 300ms ease-out;
+
+      &--open {
+        transform: translate(-45%, 0px);
+      }
+
+      &-first {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &-second {
+        display: grid;
+        width: 85%;
+      }
+    }
+
+    &__menuButton {
+      display: block;
+      border: none;
+      background: none;
+      filter: $filter-brown;
+    }
+  }
+
+  &__logo {
+    grid-column: span 2;
+    justify-self: left;
 
     @media screen and (max-width: 700px) {
-        &__wrapper {
-            @include grid;
-            align-items: center;
-            width: 200%;
+      grid-column: span 4;
+
+      img {
+        width: 85px;
+        height: auto;
+      }
+    }
+  }
+
+  &__menu {
+    //grid-column: 7 / span 6; // enable when portfolio and lang are implemented
+    grid-column: 10 / span 3;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    display: inline-flex;
+
+    @media screen and (max-width: 700px) {
+      grid-column: 5 / 13;
+    }
+
+    &__icon {
+      filter: $filter-almond;
+
+      &:hover {
+        filter: $filter-brown;
+      }
+    }
+  }
+
+  #languageSelector {
+    display: none;
+  }
+
+  li {
+    display: inline;
+    font-size: 1.5rem;
+    position: relative;
+
+    .languageSelector_icon {
+      filter: $filter-almond;
+
+      &:hover {
+        filter: $filter-brown;
+      }
+    }
+
+    a {
+      color: $black;
+      text-decoration: none;
+
+      &:hover {
+        color: $brown;
+      }
+    }
+
+    &.active a {
+      font-weight: 700;
+      color: $brown;
+
+      &:after {
+        content: "*";
+        color: $almond;
+        font-size: 2rem;
+        line-height: 0.5rem;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      font-size: 1.25rem;
+
+      &.active a {
+        &:after {
+          font-size: 1.5rem;
         }
+      }
     }
 
     @media screen and (min-width: 701px) {
-        @include grid;
-        align-items: center;
-    }
+      &#languageMenu {
+        .languageSelector {
+          top: 100%;
+          position: absolute;
+          color: black;
+          text-align: center;
+          width: 100%;
+          font-size: 1.25rem;
+          line-height: 2rem;
 
-
-
-    &__logo {
-        grid-column: span 2;
-        justify-self: left;
-
-        @media screen and (max-width: 700px) {
-            grid-column: span 4;
-
-            img {
-                width: 85px;
-                height: auto;
-            }
-        }
-    }
-
-    &__menu {
-        // grid-column: 7 / span 6; // enable when portfolio and lang are implemented
-        grid-column: 10 / span 3;
-        justify-content: space-between;
-        width: 100%;
-        cursor: pointer;
-        display: inline-flex;
-
-        @media screen and (max-width: 700px) {
-            grid-column: 5 / 13;
+          &_icon {
+            margin: 0 10px 0;
+          }
         }
 
-        &__icon {
-            filter: $filter-almond;
+        &:hover {
+          .languageSelector {
+            display: block;
+            li {
+              display: block;
+              font-size: 1rem;
 
-            &:hover {
-                filter: $filter-brown;
-            }
-        }
-    }
-
-    #languageSelector {
-        display: none;
-    }
-
-    li {
-        display: inline;
-        font-size: 1.5rem;
-        position: relative;
-
-        .languageSelector_icon {
-            filter: $filter-almond;
-
-            &:hover {
-                filter: $filter-brown;
-            }
-        }
-
-        a {
-            color: $black;
-            text-decoration: none;
-
-            &:hover {
+              &:hover {
                 color: $brown;
+                background-color: #ba7f3b44;
+              }
+
+              &.active {
+                color: $brown;
+                font-weight: 700;
+              }
             }
+          }
         }
-
-        &.active a {
-            font-weight: 700;
-            color: $brown;
-
-            &:after {
-                content: '*';
-                color: $almond;
-                font-size: 2rem;
-                line-height: 0.5rem;
-            }
-        }
-
-        @media screen and (max-width: 700px) {
-            font-size: 1rem;
-
-
-            &.active a {
-
-                &:after {
-                    font-size: 1.5rem;
-                }
-            }
-        }
-
-        &#languageMenu:hover {
-            .languageSelector {
-                display: block;
-                top: 100%;
-                position: absolute;
-                color: black;
-                text-align: center;
-                width: 100%;
-                font-size: 1.25rem;
-
-                li {
-                    display: block;
-
-                    &:hover {
-                        color: $brown;
-                    }
-
-                    &.active {
-                        color: $brown;
-                        font-weight: 700;
-                    }
-                }
-            }
-        }
+      }
     }
+
+    @media screen and (max-width: 700px) {
+      .languageSelector {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        text-transform: uppercase;
+        color: $almond;
+        font-weight: 700;
+        font-size: 0.75rem;
+      }
+    }
+  }
 }
