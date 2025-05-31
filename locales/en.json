@@ -1,78 +1,106 @@
 {
-    "menu": {
-        "home": "home",
-        "experience": "experience",
-        "contact": "contact"
+  "menu": {
+    "home": "home",
+    "portfolio": "portfolio",
+    "experience": "experience",
+    "contact": "contact"
+  },
+  "home": {
+    "header": {
+      "greeting": "hello!",
+      "identification": "I'm ",
+      "name": "Hillary"
     },
-    "home": {
-        "header": {
-            "greeting": "hello!",
-            "identification": "I'm ",
-            "name": "Hillary"
-        },
-        "paragraph": {
-            "highlight": "front-end developer",
-            "text": " passionate about creating captivating and functional experiences, combining technical skills with creativity and innovation"
-        }
-    },
-    "experience": {
-        "title": "experience",
-        "paragraph": {
-            "text": "over 7 years working with front-end, with emphasis on the most advanced technologies in the market for ",
-            "first_highlight": "JavaScript",
-            "connector": " and ",
-            "second_highlight": "React"
-        },
-        "cta": "Download resume",
-        "file": "Curriculo_HillarySousa_EN.pdf",
-        "tabs": {
-            "first_tab": {
-                "title": "iFood",
-                "subtitle": "Senior software engineer @ iFood",
-                "period": "december 2024 - present",
-                "topics": {
-                    "first": "Experience in the Logistics team, managing delivery partners on the app with a focus on identifying and handling fraud cases",
-                    "second": "Experience in the Jetski team, contributing to the agile development of strategic solutions for attracting and retaining new delivery partners at iFood",
-                    "third": "Mentorship in the iFuture internship program, directly impacting the professional development of eight interns"
-                }
-            },
-            "second_tab": {
-                "title": "Nomad",
-                "subtitle": "Senior front-end developer @ Nomad",
-                "period": "april 2023 - august 2024",
-                "topics": {
-                    "first": "Acting as OWASP Security Champion, promoting and leading safety practices inside the Backoffice development team",
-                    "second": "Acting as an intermediary between the product and Backoffice teams, facilitating communication, refining and prioritizing tasks with clearly defined demands, promoting an efficient execution and the exchange of feedbacks aiming for improvement and collaboration",
-                    "third": "Developing functionalities for Nomad's Backoffice area, aiming to expand support for operations performed via the application",
-                    "fourth": "Developing functionalities for Nomad's website, with the aim of increasing organic traffic and increasing the volume of hits on the app"
-                }
-            },
-            "third_tab": {
-                "title": "Nubank",
-                "subtitle": "Senior software engineer @ Nubank",
-                "period": "february 2022 - february 2023",
-                "topics": {
-                    "first": "Lead of the Tesouro Direto redemption experience project in the Nubank app",
-                    "second": "Lead of the experience project for the RendA+, a Tesouro Direto bond, in the Nubank app",
-                    "third": "Acting at the front for migrating code from Flutter to Clojure, following BDC principles (Back-end Driven Content)",
-                    "fourth": "Development of pages and components in Clojure and Flutter for the Investment Funds area of the Nubank app"
-                }
-            },
-            "fourth_tab": {
-                "title": "Americanas s.a.",
-                "subtitle": "Senior front-end developer @ Americanas s.a.",
-                "period": "may 2019 - december 2021",
-                "topics": {
-                    "first": "Technical reference of the team responsible for the O2O (Online to Offline) flow at Americanas.com",
-                    "second": "Technical reference for the team responsible for the navigation flow of the websites Americanas.com, Submarino.com and Shoptime.com",
-                    "third": "Development of components and experiences for the navigation pages of the websites Americanas.com, Submarino.com and Shoptime.com)",
-                    "fourth": "Development of React components in the Americanas.com product page project"
-                }
-            }
-        }
-    },
-    "contact": {
-        "title": "contact me",
-        "footer": "designed and coded by Hillary Sousa @ "
+    "paragraph": {
+      "highlight": "front-end developer",
+      "text": " passionate about creating captivating and functional experiences, combining technical skills with creativity and innovation"
     }
+  },
+  "portfolio": {
+    "title": "portfolio",
+    "paragraph": "some of my most recent projects",
+    "items": {
+      "lista-amiga": {
+        "title": "Lista Amiga",
+        "text": "Fullstack web application developed using the following technologies:\n- Node with NestJS for the backend\n- PostgreSQL for the database\n- React with Next.js for the frontend, using Tailwind to style",
+        "link": {
+          "url": "https://listaamiga.vercel.app/",
+          "text": "Live project: "
+        },
+        "github": {
+          "title": "GitHub repositories: ",
+          "links": [
+            {
+              "url": "https://github.com/hillarysousa/lista-amiga-frontend",
+              "text": "Frontend: "
+            },
+            {
+              "url": "https://github.com/hillarysousa/lista-amiga-backend",
+              "text": "Backend: "
+            }
+          ]
+        }
+      }
+    }
+  },
+  "experience": {
+    "title": "experience",
+    "paragraph": {
+      "text": "over 7 years working with front-end, with emphasis on the most advanced technologies in the market for ",
+      "first_highlight": "JavaScript",
+      "connector": " and ",
+      "second_highlight": "React"
+    },
+    "cta": "Download resume",
+    "file": "Curriculo_HillarySousa_EN.pdf",
+    "tabs": {
+      "first_tab": {
+        "title": "iFood",
+        "subtitle": "Senior software engineer @ iFood",
+        "period": "december 2024 - present",
+        "topics": {
+          "first": "Experience in the Logistics team, managing delivery partners on the app with a focus on identifying and handling fraud cases",
+          "second": "Experience in the Jetski team, contributing to the agile development of strategic solutions for attracting and retaining new delivery partners at iFood",
+          "third": "Mentorship in the iFuture internship program, directly impacting the professional development of eight interns"
+        }
+      },
+      "second_tab": {
+        "title": "Nomad",
+        "subtitle": "Senior front-end developer @ Nomad",
+        "period": "april 2023 - august 2024",
+        "topics": {
+          "first": "Acting as OWASP Security Champion, promoting and leading safety practices inside the Backoffice development team",
+          "second": "Acting as an intermediary between the product and Backoffice teams, facilitating communication, refining and prioritizing tasks with clearly defined demands, promoting an efficient execution and the exchange of feedbacks aiming for improvement and collaboration",
+          "third": "Developing functionalities for Nomad's Backoffice area, aiming to expand support for operations performed via the application",
+          "fourth": "Developing functionalities for Nomad's website, with the aim of increasing organic traffic and increasing the volume of hits on the app"
+        }
+      },
+      "third_tab": {
+        "title": "Nubank",
+        "subtitle": "Senior software engineer @ Nubank",
+        "period": "february 2022 - february 2023",
+        "topics": {
+          "first": "Lead of the Tesouro Direto redemption experience project in the Nubank app",
+          "second": "Lead of the experience project for the RendA+, a Tesouro Direto bond, in the Nubank app",
+          "third": "Acting at the front for migrating code from Flutter to Clojure, following BDC principles (Back-end Driven Content)",
+          "fourth": "Development of pages and components in Clojure and Flutter for the Investment Funds area of the Nubank app"
+        }
+      },
+      "fourth_tab": {
+        "title": "Americanas s.a.",
+        "subtitle": "Senior front-end developer @ Americanas s.a.",
+        "period": "may 2019 - december 2021",
+        "topics": {
+          "first": "Technical reference of the team responsible for the O2O (Online to Offline) flow at Americanas.com",
+          "second": "Technical reference for the team responsible for the navigation flow of the websites Americanas.com, Submarino.com and Shoptime.com",
+          "third": "Development of components and experiences for the navigation pages of the websites Americanas.com, Submarino.com and Shoptime.com)",
+          "fourth": "Development of React components in the Americanas.com product page project"
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "contact me",
+    "footer": "designed and coded by Hillary Sousa @ "
+  }
 }
