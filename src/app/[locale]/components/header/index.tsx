@@ -69,6 +69,11 @@ export default function Header() {
             >
               <a onClick={() => handleClick("#home")}>{t("t:menu:home")}</a>
             </li>
+            <li className={currentSection === "#portfolio" ? "active" : ""}>
+              <a onClick={() => handleClick("#portfolio")}>
+                {t("t:menu:portfolio")}
+              </a>
+            </li>
             <li className={currentSection === "#experience" ? "active" : ""}>
               <a onClick={() => handleClick("#experience")}>
                 {t("t:menu:experience")}

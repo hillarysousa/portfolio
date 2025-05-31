@@ -1,19 +1,127 @@
 @import "../../variables";
 
 .portfolioCard {
-    grid-column: span 3;
+  grid-column: span 3;
+  display: flex;
+  flex-flow: column nowrap;
+  cursor: zoom-in;
+
+  &__image {
     display: flex;
-    flex-flow: column nowrap;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    color: $brown;
+    font-weight: 500;
+  }
+
+  &__text,
+  &__link,
+  &__github {
+    display: none;
+  }
+
+  &:hover {
+    .portfolioCard__image {
+      filter: brightness(0.5);
+    }
+  }
+}
+
+.lightbox--open {
+  .portfolioCard {
+    flex-flow: row nowrap;
+    gap: 32px;
+    cursor: auto;
+
+    @media screen and (max-width: 700px) {
+      flex-flow: column nowrap;
+      width: 100%;
+      align-items: center;
+      padding: 0 30px;
+    }
 
     &__image {
-        display: flex;
-        width: 100%;
-        height: 100%;
+      max-width: 70%;
+
+      @media screen and (max-width: 700px) {
+        max-width: unset;
+      }
     }
 
     &__title {
-        font-size: 1.5rem;
-        color: $brown;
-        font-weight: 500;
+      color: $sand;
+      font-weight: 700;
+      font-size: 2rem;
+      padding-bottom: 15px;
     }
+
+    @media screen and (max-width: 700px) {
+      &__content {
+        word-wrap: break-word;
+        width: 100%;
+        padding-bottom: 20px;
+      }
+    }
+
+    &__text {
+      display: block;
+      font-size: 1.3rem;
+      color: $sand;
+      white-space: pre-line;
+    }
+
+    &__link {
+      display: block;
+      font-size: 1.3rem;
+      color: $sand;
+      font-weight: bold;
+      margin-top: 15px;
+
+      a {
+        color: $sand;
+        font-weight: normal;
+        margin-top: 5px;
+
+        &:hover {
+          color: $almond;
+        }
+      }
+    }
+
+    &__github {
+      display: block;
+      font-size: 1.3rem;
+      color: $sand;
+      font-weight: bold;
+      margin-top: 30px;
+
+      a {
+        color: $sand;
+
+        &:hover {
+          color: $almond;
+        }
+      }
+
+      ul {
+        padding-inline-start: 20px;
+        font-weight: normal;
+
+        li {
+          margin-top: 10px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    &:hover {
+      .portfolioCard__image {
+        filter: none;
+      }
+    }
+  }
 }

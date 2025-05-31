@@ -1,16 +1,13 @@
+"use client";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import Behance from "../assets/svg/behance.svg";
 import GitHub from "../assets/svg/github.svg";
 import LinkedIn from "../assets/svg/linkedin.svg";
 import DoubleArrow from "../assets/svg/down_double_arrow.svg";
-import initTranslations from "@/app/i18n";
 
-export default async function Home({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) {
-  const { t } = await initTranslations(locale, ["t"]);
+export default function Home() {
+  const { t } = useTranslation("t");
 
   return (
     <section id="home" className="home">

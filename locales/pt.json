@@ -1,79 +1,106 @@
 {
-    "menu": {
-        "home": "home",
-        "experience": "experiência",
-        "contact": "contato"
+  "menu": {
+    "home": "home",
+    "portfolio": "portfólio",
+    "experience": "experiência",
+    "contact": "contato"
+  },
+  "home": {
+    "header": {
+      "greeting": "olá!",
+      "identification": "sou a ",
+      "name": "Hillary"
     },
-    "home": {
-        "header": {
-            "greeting": "olá!",
-            "identification": "sou a ",
-            "name": "Hillary"
-        },
-        "paragraph": {
-            "highlight": "desenvolvedora front-end",
-            "text": " apaixonada por criar experiências cativantes e funcionais, combinando habilidades técnicas com criatividade e inovação"
-        }
-    },
-    "experience": {
-        "title": "experiência",
-        "paragraph": {
-            "text": "mais de 7 anos atuando em desenvolvimento front-end, com ênfase nas tecnologias mais avançadas do mercado em ",
-            "first_highlight": "JavaScript",
-            "connector": " e ",
-            "second_highlight": "React"
-        },
-        "cta": "Download CV",
-        "file": "Curriculo_HillarySousa.pdf",
-        "tabs": {
-            "first_tab": {
-                "title": "iFood",
-                "subtitle": "Engenheira de software sênior @ iFood",
-                "period": "dezembro de 2024 - até o momento",
-                "topics": {
-                    "first": "Atuação na equipe de Logística, responsável pela gestão dos entregadores do app, com foco na identificação e tratamento de casos de fraude",
-                    "second": "Experiência na frente Jetski, contribuindo para o desenvolvimento ágil de soluções estratégicas para atração e retenção de novos entregadores no iFood",
-                    "third": "Mentoria no programa de estágio iFuture, impactando diretamente o desenvolvimento profissional de oito estagiários"
-                }
-            },
-            "second_tab": {
-                "title": "Nomad",
-                "subtitle": "Desenvolvedora front-end sênior @ Nomad",
-                "period": "abril de 2023 - agosto de 2024",
-                "topics": {
-                    "first": "Atuação como OWASP Security Champion, promovendo e liderando práticas de segurança dentro da equipe de desenvolvimento do Backoffice",
-                    "second": "Atuação como intermediária entre os times de produto e Backoffice, facilitando a comunicação, refinando e priorizando tarefas com requisitos claramente definidos, promovendo uma execução eficiente e intercâmbio de feedbacks para melhoria contínua e colaboração",
-                    "third": "Desenvolvimento de funcionalidades para a área de Backoffice da Nomad, visando ampliar o suporte às operações executadas via aplicativo",
-                    "fourth": "Desenvolvimento de funcionalidades para o site da Nomad, com o intuito de incrementar o tráfego orgânico e aumentar volume de acessos no aplicativo"
-                }
-            },
-            "third_tab": {
-                "title": "Nubank",
-                "subtitle": "Engenheira de software sênior @ Nubank",
-                "period": "fevereiro de 2022 - fevereiro de 2023",
-                "topics": {
-                    "first": "Lead do projeto de experiência de resgate do Tesouro Direto no aplicativo do Nubank",
-                    "second": "Lead do projeto de experiência para o título RendA+ do Tesouro Direto no aplicativo do Nubank",
-                    "third": "Atuação na frente para migração de código em Flutter para Clojure seguindo princípios de BDC (Back-end Driven Content)",
-                    "fourth": "Desenvolvimento de páginas e componentes em Clojure e Flutter para a área de Fundos de Investimento do aplicativo do Nubank"
-                }
-                
-            },
-            "fourth_tab": {
-                "title": "Americanas s.a.",
-                "subtitle": "Desenvolvedora front-end sênior @ Americanas s.a.",
-                "period": "maio de 2019 - dezembro de 2021",
-                "topics": {
-                    "first": "Referência técnica do time responsável pelo fluxo O2O (Online to Offline) da Americanas.com",
-                    "second": "Referência técnica para a equipe responsável pelo fluxo de navegação dos sites Americanas.com, Submarino.com e Shoptime.com",
-                    "third": "Desenvolvimento de componentes e experiências para as páginas de navegação dos sites Americanas.com, Submarino.com e Shoptime.com)",
-                    "fourth": "Desenvolvimento de componentes React no projeto da página de produto da Americanas.com"
-                }
-            }
-        }
-    },
-    "contact": {
-        "title": "entre em contato comigo",
-        "footer": "desenhado e codado por Hillary Sousa @ "
+    "paragraph": {
+      "highlight": "desenvolvedora front-end",
+      "text": " apaixonada por criar experiências cativantes e funcionais, combinando habilidades técnicas com criatividade e inovação"
     }
+  },
+  "portfolio": {
+    "title": "portfólio",
+    "paragraph": "alguns dos meus projetos mais recentes",
+    "items": {
+      "lista-amiga": {
+        "title": "Lista Amiga",
+        "text": "Aplicação web fullstack desenvolvida usando as seguintes tecnologias:\n- Node com NestJS para o back-end;\n- PostgreSQL para o banco de dados;\n- React com Next.js para o front-end, utilizando Tailwind para estilização.",
+        "link": {
+          "url": "https://listaamiga.vercel.app/",
+          "text": "Projeto ao vivo: "
+        },
+        "github": {
+          "title": "Repositórios no GitHub: ",
+          "links": [
+            {
+              "url": "https://github.com/hillarysousa/lista-amiga-frontend",
+              "text": "Front-End: "
+            },
+            {
+              "url": "https://github.com/hillarysousa/lista-amiga-backend",
+              "text": "Back-End: "
+            }
+          ]
+        }
+      }
+    }
+  },
+  "experience": {
+    "title": "experiência",
+    "paragraph": {
+      "text": "mais de 7 anos atuando em desenvolvimento front-end, com ênfase nas tecnologias mais avançadas do mercado em ",
+      "first_highlight": "JavaScript",
+      "connector": " e ",
+      "second_highlight": "React"
+    },
+    "cta": "Download CV",
+    "file": "Curriculo_HillarySousa.pdf",
+    "tabs": {
+      "first_tab": {
+        "title": "iFood",
+        "subtitle": "Engenheira de software sênior @ iFood",
+        "period": "dezembro de 2024 - até o momento",
+        "topics": {
+          "first": "Atuação na equipe de Logística, responsável pela gestão dos entregadores do app, com foco na identificação e tratamento de casos de fraude",
+          "second": "Experiência na frente Jetski, contribuindo para o desenvolvimento ágil de soluções estratégicas para atração e retenção de novos entregadores no iFood",
+          "third": "Mentoria no programa de estágio iFuture, impactando diretamente o desenvolvimento profissional de oito estagiários"
+        }
+      },
+      "second_tab": {
+        "title": "Nomad",
+        "subtitle": "Desenvolvedora front-end sênior @ Nomad",
+        "period": "abril de 2023 - agosto de 2024",
+        "topics": {
+          "first": "Atuação como OWASP Security Champion, promovendo e liderando práticas de segurança dentro da equipe de desenvolvimento do Backoffice",
+          "second": "Atuação como intermediária entre os times de produto e Backoffice, facilitando a comunicação, refinando e priorizando tarefas com requisitos claramente definidos, promovendo uma execução eficiente e intercâmbio de feedbacks para melhoria contínua e colaboração",
+          "third": "Desenvolvimento de funcionalidades para a área de Backoffice da Nomad, visando ampliar o suporte às operações executadas via aplicativo",
+          "fourth": "Desenvolvimento de funcionalidades para o site da Nomad, com o intuito de incrementar o tráfego orgânico e aumentar volume de acessos no aplicativo"
+        }
+      },
+      "third_tab": {
+        "title": "Nubank",
+        "subtitle": "Engenheira de software sênior @ Nubank",
+        "period": "fevereiro de 2022 - fevereiro de 2023",
+        "topics": {
+          "first": "Lead do projeto de experiência de resgate do Tesouro Direto no aplicativo do Nubank",
+          "second": "Lead do projeto de experiência para o título RendA+ do Tesouro Direto no aplicativo do Nubank",
+          "third": "Atuação na frente para migração de código em Flutter para Clojure seguindo princípios de BDC (Back-end Driven Content)",
+          "fourth": "Desenvolvimento de páginas e componentes em Clojure e Flutter para a área de Fundos de Investimento do aplicativo do Nubank"
+        }
+      },
+      "fourth_tab": {
+        "title": "Americanas s.a.",
+        "subtitle": "Desenvolvedora front-end sênior @ Americanas s.a.",
+        "period": "maio de 2019 - dezembro de 2021",
+        "topics": {
+          "first": "Referência técnica do time responsável pelo fluxo O2O (Online to Offline) da Americanas.com",
+          "second": "Referência técnica para a equipe responsável pelo fluxo de navegação dos sites Americanas.com, Submarino.com e Shoptime.com",
+          "third": "Desenvolvimento de componentes e experiências para as páginas de navegação dos sites Americanas.com, Submarino.com e Shoptime.com)",
+          "fourth": "Desenvolvimento de componentes React no projeto da página de produto da Americanas.com"
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "entre em contato comigo",
+    "footer": "desenhado e codado por Hillary Sousa @ "
+  }
 }
