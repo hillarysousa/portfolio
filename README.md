@@ -1,37 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio – hillarysousa.com.br
+Este é o código-fonte do meu portfólio pessoal, desenvolvido com **Next.js** e **TypeScript**. O objetivo é apresentar meus projetos, experiências e habilidades de forma moderna e responsiva.
 
-## Getting Started
+🔗 Acesse em [hillarysousa.com.br](https://hillarysousa.com.br/)
 
-First, run the development server:
+## 🚀 Tecnologias Utilizadas
+- [Next.js](https://nextjs.org/)
+- [React](https://pt-br.react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Sass](https://sass-lang.com/)
+- [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)
+
+## 📁 Estrutura do Projeto
+```
+portfolio/
+├── src/
+│   └── app/[locale]/      # Componentes e páginas da aplicação localizados
+├── public/                # Arquivos públicos (imagens, favicon, etc.)
+├── locales/               # Arquivos de localização (i18n)
+├── .eslintrc.json
+├── .gitignore
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── README.md
+└── tsconfig.json
+```
+
+## ⚙️ Configuração e Execução
+### Pré-requisitos
+- [Node.js](https://nodejs.org/) (versão 16 ou superior)
+- [npm](https://www.npmjs.com/) ou [yarn](https://classic.yarnpkg.com/en/)
+
+### Passos para executar localmente
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/hillarysousa/portfolio.git
+cd portfolio
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+# ou
+yarn install
+```
+3. Inicie o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A aplicação estará disponível em http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📄 Licença
+Este projeto está licenciado sob a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Você pode:
 
-## Learn More
+- Visualizar e compartilhar este código sem modificações e apenas para fins não comerciais.
 
-To learn more about Next.js, take a look at the following resources:
+Você não pode:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Usar este código para fins comerciais.
+- Modificar, adaptar ou criar obras derivadas deste código.
+A licença completa pode ser encontrada em
+[Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.pt-br).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
+___
+Desenvolvido por Hillary Sousa, Sr. Front-End Engineer.
